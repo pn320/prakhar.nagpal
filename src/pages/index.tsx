@@ -1,10 +1,21 @@
-import { Box } from "@chakra-ui/react";
-
+import { Container, Heading, Link, Text } from "@chakra-ui/react";
 
 const Index = () => (
-  <Box px={"4"} py={'4'}>
-    Hey, there!  My name is Prakhar Nagpal. <br /> I'm a second year computing student at Imperial College London, currently working at FiveAI as a software engineering intern for the summer!
-  </Box>
+  <Container as="main" maxW={"container.xl"} pt={16} textAlign={"center"}>
+      <Heading size={"md"} fontSize={"2xl"} lineHeight={2.5}>Hi, I'm Prakhar Nagpal.</Heading>
+      <Text lineHeight={1.3}>
+        I'm a second year computing student at Imperial College London pursuing a Masters in Computer Science with a specification in Machine Learnig and Artificial  Intelligence. I currently work as a software engineering intern at&nbsp;
+        <Link
+          href={"https://www.five.ai/"}
+          color={"purple.400"} _hover={{
+            textDecoration: "none",
+            color: "purple.500"
+          }}
+          target={"_blank"}
+        >
+          FiveAI@London</Link>.
+      </Text>
+  </Container>
 );
 
 export default Index
